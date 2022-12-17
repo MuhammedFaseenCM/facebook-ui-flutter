@@ -1,3 +1,4 @@
+import 'package:faceook/sections/widgets/childWidgets.dart';
 import 'package:faceook/widgets/assets.dart';
 import 'package:flutter/material.dart';
 
@@ -7,8 +8,7 @@ class StorySection extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ListTile(
-      leading: ClipRRect(
-          borderRadius: BorderRadius.circular(100), child: Image.asset(faseen)),
+      leading: storyCirclePic(image: faseen),
       title: const TextField(
         decoration: InputDecoration(
             hintText: "What's on your mind?",

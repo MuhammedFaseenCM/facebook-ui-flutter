@@ -26,3 +26,22 @@ Widget verticalLine() {
     color: Colors.grey[300],
   );
 }
+
+Widget storyCirclePic({required String image}) {
+  return Stack(children: [
+    ClipRRect(
+        borderRadius: BorderRadius.circular(100), child: Image.asset(image)),
+    Positioned(
+      bottom: 0,
+      right: 1.0,
+      child: Container(
+        width: 15,
+        height: 15,
+        decoration: BoxDecoration(
+            color: Colors.greenAccent,
+            shape: BoxShape.circle,
+            border: Border.all(color: Colors.white, width: 2.0)),
+      ),
+    )
+  ]);
+}

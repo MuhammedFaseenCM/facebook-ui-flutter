@@ -39,7 +39,8 @@ class Home extends StatelessWidget {
           marginDivider(thickness: 1.0),
           HeaderButtonSection(),
           marginDivider(),
-          RoomSection()
+          RoomSection(),
+          marginDivider(thickness: 1.0)
         ]),
       ),
     );
