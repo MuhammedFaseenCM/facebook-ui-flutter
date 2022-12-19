@@ -1,11 +1,20 @@
 import 'package:faceook/sections/widgets/childWidgets.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/src/widgets/container.dart';
-import 'package:flutter/src/widgets/framework.dart';
 
 class HeaderButtonSection extends StatelessWidget {
-  const HeaderButtonSection({super.key});
+  final Widget buttonOne;
+  final Widget buttonTwo;
+  final Widget buttonThree;
+  final bool vertLine;
+  // final Color buttonColor;
+  // final String label;
+  // final Icon buttonicon;
+  const HeaderButtonSection(
+      {super.key,
+      required this.buttonOne,
+      required this.buttonTwo,
+      required this.buttonThree,
+      this.vertLine = false});
 
   @override
   Widget build(BuildContext context) {
@@ -14,17 +23,22 @@ class HeaderButtonSection extends StatelessWidget {
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
         children: [
-          textbuttons(icon: Icons.video_call, color: Colors.red, label: 'Live'),
-          verticalLine(),
-          textbuttons(
-              icon: Icons.photo_library_rounded,
-              color: Colors.green,
-              label: 'Photo'),
-          verticalLine(),
-          textbuttons(
-              icon: Icons.video_call, color: Colors.purple, label: 'Room')
+          buttonOne,
+          vertLine ? verticalLine() : SizedBox(),
+          buttonTwo,
+          vertLine ? verticalLine() : SizedBox(),
+          buttonThree
         ],
       ),
     );
+  }
+}
+
+class buttons extends StatelessWidget {
+  const buttons({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Container();
   }
 }

@@ -16,12 +16,12 @@ class RoomSection extends StatelessWidget {
         padding: EdgeInsets.all(10.0),
         children: [
           roomButton(),
-          storyCirclePic(image: faseen),
-          storyCirclePic(image: raju),
-          storyCirclePic(image: mammootty),
-          storyCirclePic(image: mohanlal),
-          storyCirclePic(image: faseen),
-          storyCirclePic(image: raju)
+          storyCirclePic(image: faseen, status: true),
+          storyCirclePic(image: raju, status: true),
+          storyCirclePic(image: mammootty, status: true),
+          storyCirclePic(image: mohanlal, status: true),
+          storyCirclePic(image: kohli, status: true),
+          storyCirclePic(image: child, status: true)
         ],
       ),
     );
